@@ -1,0 +1,29 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<table class="table">
+    <tr>
+        <th>名称</th>
+        <th>状态</th>
+        <th>起始时间</th>
+        <th>预计完成时间</th>
+        <th>实际完成时间</th>
+        <th>操作</th>
+    </tr>
+    {% for case in cases %}
+        <tr>
+            <td>{{ case.name }}</td>
+            <td>{{ case.status }}</td>
+            <td>{{ case.start_date }}</td>
+            <td>{{ case.expect_done_date }}</td>
+            <td>{{ case.done_date }}</td>
+            <td><a href="/{{ case.id }}" >详细</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
