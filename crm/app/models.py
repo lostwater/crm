@@ -23,9 +23,9 @@ class Case(models.Model):
     name = models.CharField(max_length=50)
     client = models.ForeignKey(Client)
     status = models.IntegerField(choices=CASE_STATUS)
-    start_date = models.DateField()
-    expect_done_date = models.DateField()
-    done_date = models.DateField()
+    startdate = models.DateField(blank=True, null=True)
+    expect_donedate = models.DateField(blank=True, null=True)
+    donedate = models.DateField(blank=True, null=True)
     developers = models.ManyToManyField(Developer)
 
 class Comment(models.Model):
@@ -33,7 +33,7 @@ class Comment(models.Model):
     developer = models.ForeignKey(Developer)
     case = models.ForeignKey(Case)
     client = models.ForeignKey(Client)
-    date = models.DateField()
+    date = models.DateField(blank=True, null=True)
 
 class CaseDeveloper(models.Model):
     case = models.ForeignKey(Case)

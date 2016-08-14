@@ -1,4 +1,4 @@
-#!c:\users\lostw\documents\visual studio 2015\Projects\crm\crm\env\Scripts\python.exe
+#!C:\Users\Lost\Source\Repos\crm\crm\env\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

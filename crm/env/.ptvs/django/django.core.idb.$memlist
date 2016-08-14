@@ -3,13 +3,13 @@ servers
 signals
 signing
 validators
-cache
+handlers
 urlresolvers
 files
 wsgi
 exceptions
 serializers
 management
-handlers
+cache
 paginator
 checks

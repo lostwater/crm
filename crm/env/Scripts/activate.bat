@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=c:\users\lostw\DOCUME~1\VISUAL~1\Projects\crm\crm\env"
+set "VIRTUAL_ENV=C:\Users\Lost\Source\Repos\crm\crm\env"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

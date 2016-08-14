@@ -1,7 +1,7 @@
 retrying
 colorama
 requests
-progress
+html5lib
 pkg_resources
 os
 ipaddress
@@ -10,7 +10,7 @@ packaging
 pyparsing
 distlib
 vendored
-html5lib
+progress
 glob
 DEBUNDLED
 cachecontrol

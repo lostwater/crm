@@ -37,7 +37,7 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
-
+     url(r'^cases/create',  app.views.case_create, name='case_create'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
