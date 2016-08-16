@@ -10,8 +10,8 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
 
-#from bootstrap3_datepicker.fields import DatePickerField
-#from bootstrap3_datepicker.widgets import DatePickerInput
+from bootstrap3_datepicker.fields import DatePickerField
+from bootstrap3_datepicker.widgets import DatePickerInput
 
 class BootstrapAuthenticationForm(AuthenticationForm):
     """Authentication form which uses boostrap CSS."""
@@ -37,4 +37,3 @@ class ClientForm(ModelForm):
         fields = '__all__'
 
 
-    
