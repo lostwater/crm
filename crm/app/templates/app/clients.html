@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<a href="clients/create"><h3>添加项目</h3></a>
+<table class="table">
+    <tr>
+        <th>名称</th>
+        <th>操作</th>
+    </tr>
+    {% for client in clients %}
+        <tr>
+            <td>{{ client.name }}</td>
+            <td><a href="/{{ client.id }}" >详细</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

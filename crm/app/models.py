@@ -29,18 +29,22 @@ class Case(models.Model):
     developers = models.ManyToManyField(Developer)
 
 class Comment(models.Model):
-    content =  models.CharField(max_length=50)
-    developer = models.ForeignKey(Developer)
-    case = models.ForeignKey(Case)
-    client = models.ForeignKey(Client)
+    content =  models.TextField()
+    developer = models.ForeignKey(Developer,null=True)
+    case = models.ForeignKey(Case,null=True)
+    client = models.ForeignKey(Client,null=True)
     date = models.DateField(blank=True, null=True)
 
 class CaseDeveloper(models.Model):
     case = models.ForeignKey(Case)
     developer = models.ForeignKey(Developer)
     role = models.CharField(max_length=50)
-    #models.OneToOneField(Case
-                         
+    #models.OneToOneField(Case)
 
+class SysLog(models.Model):
+    date = models.DateField()
+    operator = models.CharField(max_length=50)
+    content =  models.TextField()
+    
 
 # Create your models here.

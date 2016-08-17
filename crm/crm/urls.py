@@ -37,7 +37,11 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
+     url(r'^cases$',  app.views.cases, name='cases'),
      url(r'^cases/create',  app.views.case_create, name='case_create'),
+     url(r'^clients$',  app.views.clients, name='clients'),
+     url(r'^clients/create$',  app.views.client_create, name='client_create'),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
