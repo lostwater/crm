@@ -4,15 +4,24 @@ from django.contrib.auth.models import User
 class Role(models.Model):
     name = models.CharField(max_length=50)
 
-class Client(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+class Client(AbstractUser):
+    description = models.TextField()
+    username = models.CharField(max_length=30, verbose_name='帐号')
+    class Meta:
+        verbose_name = '客户'
+        verbose_name_plural = verbose_name
 
-class Manager(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+class Manager(AbstractUser):
+    username = models.CharField(max_length=30, verbose_name='帐号')
+    class Meta:
+        verbose_name = '经理'
+        verbose_name_plural = verbose_name
 
-class Developer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    roles = models.ManyToManyField(Role)
+class Developer(AbstractUser):
+    username = models.CharField(max_length=30, verbose_name='帐号')
+    class Meta:
+        verbose_name = '开发者'
+        verbose_name_plural = verbose_name
 
 class Case(models.Model):
     CASE_STATUS = (
